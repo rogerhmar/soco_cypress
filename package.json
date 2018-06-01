@@ -1,0 +1,13 @@
+{
+  "name": "soco_cypress",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "open": "npx cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.0.1"
+  }
+}
