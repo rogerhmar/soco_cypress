@@ -1,4 +1,5 @@
-describe('Er jeg en del av teamet?', () => {
+
+describe('Er jeg en del av teamet? (OK)', () => {
     before(() => {
       cy.visit("http://soco.no")
       cy.get(".menu-button").click()
