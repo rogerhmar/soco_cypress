@@ -3,9 +3,9 @@
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
       <b-form-group id="email"
                     label="Email address:"
-                    label-for="exampleInput1"
+                    label-for="emailInput"
                     >
-        <b-form-input id="exampleInput1"
+        <b-form-input id="emailInput"
                       type="email"
                       v-model="form.email"
                       required
@@ -14,8 +14,8 @@
       </b-form-group>
       <b-form-group id="navn"
                     label="Navn:"
-                    label-for="exampleInput2">
-        <b-form-input id="exampleInput2"
+                    label-for="navnInput">
+        <b-form-input id="navnInput"
                       type="text"
                       v-model="form.name"
                       required
@@ -24,8 +24,8 @@
       </b-form-group>
       <b-form-group id="mat"
                     label="Favorittmat:"
-                    label-for="exampleInput3">
-        <b-form-select id="exampleInput3"
+                    label-for="matInput">
+        <b-form-select id="matInput"
                       :options="foods"
                       required
                       v-model="form.food">
