@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-      <b-form-group id="exampleInputGroup1"
+      <b-form-group id="email"
                     label="Email address:"
                     label-for="exampleInput1"
                     >
@@ -12,7 +12,7 @@
                       placeholder="email">
         </b-form-input>
       </b-form-group>
-      <b-form-group id="exampleInputGroup2"
+      <b-form-group id="navn"
                     label="Navn:"
                     label-for="exampleInput2">
         <b-form-input id="exampleInput2"
@@ -22,7 +22,7 @@
                       placeholder="Navn">
         </b-form-input>
       </b-form-group>
-      <b-form-group id="exampleInputGroup3"
+      <b-form-group id="mat"
                     label="Favorittmat:"
                     label-for="exampleInput3">
         <b-form-select id="exampleInput3"
