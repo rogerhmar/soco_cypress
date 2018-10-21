@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Jeg har laget denne for å demonstrere bruk av Cypress."/>
+    <HelloWorld msg=""/>
     <Form />
   </div>
 </template>

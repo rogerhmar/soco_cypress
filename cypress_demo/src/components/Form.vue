@@ -1,32 +1,81 @@
 <template>
-  <form id='form'>
-    <input type="text"  v-model="myname">
-    <label >Name</label>
-    <input type="submit" @click="handleSubmit">
-    <span>{{ mystatus }}</span>
-  </form>
+  <div>
+    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+      <b-form-group id="exampleInputGroup1"
+                    label="Email address:"
+                    label-for="exampleInput1"
+                    >
+        <b-form-input id="exampleInput1"
+                      type="email"
+                      v-model="form.email"
+                      required
+                      placeholder="email">
+        </b-form-input>
+      </b-form-group>
+      <b-form-group id="exampleInputGroup2"
+                    label="Navn:"
+                    label-for="exampleInput2">
+        <b-form-input id="exampleInput2"
+                      type="text"
+                      v-model="form.name"
+                      required
+                      placeholder="Navn">
+        </b-form-input>
+      </b-form-group>
+      <b-form-group id="exampleInputGroup3"
+                    label="Favorittmat:"
+                    label-for="exampleInput3">
+        <b-form-select id="exampleInput3"
+                      :options="foods"
+                      required
+                      v-model="form.food">
+        </b-form-select>
+      </b-form-group>
+      <b-form-group id="exampleGroup4">
+        <b-form-checkbox-group v-model="form.checked" id="exampleChecks">
+          <b-form-checkbox value="ditt">Velg denne</b-form-checkbox>
+          <b-form-checkbox value="datt">Og kanskje også denne</b-form-checkbox>
+        </b-form-checkbox-group>
+      </b-form-group>
+      <b-button type="submit" variant="primary">Send</b-button>
+      <b-button type="reset" variant="danger">Nullstill</b-button>
+    </b-form>
+    <span>{{status}}</span>
+  </div>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-
-@Component
-export default class Form extends Vue {
-  private myname:string = ''
-  private mystatus:string = ''
-
-  handleSubmit() {
-    if(!!this.myname) {
-      this.mystatus = `${this.myname} Er registert`;
-    } else {
-      this.mystatus = 'Navn må fylles ut';
-    }
-  }
+<script lang="js">
+export default {
   data() {
     return {
-      myname: this.myname,
-      status: this.mystatus,
+      form: {
+        email: '',
+        name: '',
+        food: null,
+        checked: [],
+      },
+      status: '',
+      foods: [
+        { text: 'Velg en', value: null },
+        'Kjøttkaker', 'Bønnestuing', 'Brød', 'Havregryn',
+      ],
+      show: true,
     };
-  }
-}
+  },
+  methods: {
+    onSubmit(evt) {
+      evt.preventDefault();
+      this.status = JSON.stringify(this.form);
+    },
+    onReset(evt) {
+      evt.preventDefault();
+      /* Reset our form values */
+      this.form.email = '';
+      this.form.name = '';
+      this.form.food = null;
+      this.form.checked = [];
+      this.status = '';
+    },
+  },
+};
 </script>
