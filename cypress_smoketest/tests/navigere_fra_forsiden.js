@@ -1,5 +1,5 @@
 
-  describe('Jeg kan navigere til "Om oss"', () => {
+  describe('Jeg kan navigere fra forsiden', () => {
     before(() => {
       cy.visit("http://soco.no")
       cy.get(".menu-button").click()
