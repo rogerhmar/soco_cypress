@@ -1,7 +1,7 @@
 
-describe('Er jeg en del av teamet? (OK)', () => {
+describe('Finner jeg meg selv? (OK)', () => {
     before(() => {
-      cy.visit("http://soco.no")
+      cy.visit("/")
       cy.get(".menu-button").click()
       cy.contains("Om oss").click()
       cy.get(".side-nav").contains("Medarbeidere").click({force:true});
