@@ -40,7 +40,7 @@
       <b-button type="submit" variant="primary">Send</b-button>
       <b-button type="reset" variant="danger">Nullstill</b-button>
     </b-form>
-    <span>{{status}}</span>
+    <span id="status">{{status}}</span>
   </div>
 </template>
 
