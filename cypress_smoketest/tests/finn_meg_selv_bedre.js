@@ -1,5 +1,5 @@
 
-describe('Er jeg en del av teamet? (Bedre)', () => {
+describe('Finn meg selv (Bedre)', () => {
     before(() => {
       cy.visit("/ansatte")
   })

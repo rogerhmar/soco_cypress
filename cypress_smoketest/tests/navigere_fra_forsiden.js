@@ -6,7 +6,7 @@
       cy.contains("Om oss").click()
   })
     it('Jeg forventer å komme til siden "om oss"', () => {
-        cy.url().should().eq('http://soco.no/om-oss')
+        cy.url().should('contain','/om-oss')
         cy.contains("Om oss")
       })
   })

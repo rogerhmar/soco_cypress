@@ -9,7 +9,7 @@
         it(`Jeg forventer å komme til siden ${side.itemToClick}`, () => {
             cy.visit("/om-oss")
             cy.get(".side-nav").contains(side.itemToClick).click({force:true});
-            cy.url().should('eq', side.expectedUrl)
+            cy.url().should('contain', side.expectedUrl)
         })
       })
   })

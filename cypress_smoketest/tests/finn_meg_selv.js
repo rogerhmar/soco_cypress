@@ -1,5 +1,5 @@
 
-describe('Finner jeg meg selv? (OK)', () => {
+describe('Finn meg selv (OK)', () => {
     before(() => {
       cy.visit("/")
       cy.get(".menu-button").click()
