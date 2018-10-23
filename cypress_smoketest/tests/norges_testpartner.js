@@ -1,8 +1,8 @@
 describe('Er SOCO norges Testpartner?', () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit("/")
   })
   it('så forventer jeg å se at vi er norges testpartner', () => {
-      cy.get("#intro").contains("Vi er Norges testpartner")
+      cy.contains("Vi er Norges testpartner")
   })
 })
