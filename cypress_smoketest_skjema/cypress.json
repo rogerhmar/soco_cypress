@@ -1,0 +1,6 @@
+{
+    "baseUrl": "http://soco-cypress.surge.sh",
+    "testFiles": "tests/*",
+    "integrationFolder": ".",
+    "video": false
+ } 
