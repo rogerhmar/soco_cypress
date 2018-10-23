@@ -1,6 +1,0 @@
-{
-    "baseUrl": "http://soco.no",
-    "testFiles": "tests/*",
-    "integrationFolder": ".",
-    "video": false
- } 
