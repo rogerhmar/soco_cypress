@@ -1,9 +1,9 @@
 
-describe('Kan jeg åpne nrk.no?', () => {
+describe('Er SOCO norges Testpartner?', () => {
   beforeEach(() => {
-    cy.visit("https://nrk.no")
+    cy.visit("/")
   })
-  it('Jeg forventer å se "nrk"', () => {
-      cy.contains("nrk")
+  it('så forventer jeg å se at vi er norges testpartner', () => {
+    cy.contains("Vi er Norges testpartner")
   })
 })
